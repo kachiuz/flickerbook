@@ -1,0 +1,13 @@
+<form action="premium_charge.php" method="POST">
+		<script
+		  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		  data-key="<?php echo $stripe['publishable'];?>"
+		  data-currency="gbp"
+		  data-email="<?php echo $email;?>"
+		  data-amount="299"
+		  data-name="Flickerbook Premium"
+		  data-description="Premium Membership"
+		  data-label="Subscribe to Premium for 2.99£/Month"
+		  data-locale="auto">
+		</script>
+</form>
