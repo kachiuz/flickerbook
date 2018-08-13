@@ -1,0 +1,22 @@
+user-aget: *
+Dissallow: /vendor/
+Dissallow: /privacyPolicy.php
+Dissallow: /cookiePolicy.php
+Dissallow: /login.php
+Dissallow: /login_action.php
+Dissallow: /login_tools.php
+Dissallow: /account.php
+Dissallow: /signout.php
+Dissallow: /termsAndConditions.php
+Dissallow: /index.php
+Dissallow: /paymentsettings.php
+Dissallow: /deductionsettings.php
+Dissallow: /backpaycalculator.php
+Dissallow: /calendargenerator.php
+Dissallow: /totalsCalculator.php
+Dissallow: /premium.php
+Dissallow: /premium_init.php
+Dissallow: /premium_charge.php
+Dissallow: /premium_chargeOnce.php
+
+Sitemap: https://flickerbook.co.uk/sitemap.xml

@@ -1,0 +1,3150 @@
+/*@import "reset.css";*/
+body {
+	font: 20px sans-serif; 
+	background: #e0e0d1;
+	margin-left: 0px;}
+input, select 
+{
+    border-radius: 0;	
+}
+hr {
+    height: 1px;
+    color: grey;
+	margin-bottom: 2px;
+	margin-top: 2px;
+    background: grey;
+    font-size: 0;
+    border: 0;
+}
+
+
+/*applies to all style sheets-----------------------------------------------------------------------------------------------*/
+.iframe {
+	width: 480px;
+	height: 300px;
+	margin: auto;
+}
+address{
+	padding-left: 30%;
+}
+#logoContainer {
+	margin: auto;
+	width: 514px;
+	height: 80px;
+	margin-top: 5px;
+	z-index: 4;
+	position:relative;
+	top:0px;
+}
+.backgroundSheet
+{
+	position: absolute;
+	box-shadow: -3px -1px 3px grey;
+	left:0%;
+	width:10%;
+	height:100%;
+	background: #e0e0d1;
+	border: 1px solid grey;
+	opacity: 0.7;
+}
+.backgroundSheet:nth-child(2)
+{
+	top: 2%;
+	left:4%;
+}
+.backgroundSheet:nth-child(3)
+{
+	top: 4%;
+	left:8%;
+}
+.backgroundSheet:nth-child(4)
+{
+	top: 6%;
+	left:12%;
+}
+.backgroundSheet:nth-child(5)
+{
+	top: 8%;
+	left:16%;
+}
+.backgroundSheet:nth-child(6)
+{
+	top: 10%;
+	left:20%;
+}
+.backgroundSheet:nth-child(7)
+{
+	top: 12%;
+	left:24%;
+}
+.backgroundSheet:nth-child(8)
+{
+	top: 14%;
+	left:28%;
+}
+.backgroundSheet:nth-child(9)
+{
+	top: 16%;
+	left:32%;
+}
+.backgroundSheet:nth-child(10)
+{
+	top: 18%;
+	left:36%;
+}
+.backgroundSheet:nth-child(11)
+{
+	top: 20%;
+	left:40%;
+}
+.backgroundSheet:nth-child(12)
+{
+	top: 22%;
+	left:44%;
+}
+
+
+.backgroundSheet2
+{
+	position: absolute;
+	box-shadow: 3px 1px 3px grey;
+	right:0%;
+	top: 0%;
+	width:10%;
+	height:100%;
+	background: #e0e0d1;
+	border: 1px solid grey;
+	opacity: 0.7;
+}
+.backgroundSheet2:nth-child(13)
+{
+	top: 2%;
+	right:4%;
+}
+
+.backgroundSheet2:nth-child(14)
+{
+	top: 4%;
+	right:8%;
+}
+.backgroundSheet2:nth-child(15)
+{
+	top: 6%;
+	right:12%;
+}
+
+.backgroundSheet2:nth-child(16)
+{
+	top: 8%;
+	right:16%;
+}
+
+.backgroundSheet2:nth-child(17)
+{
+	top: 10%;
+	right:20%;
+}
+
+.backgroundSheet2:nth-child(18)
+{
+	top: 12%;
+	right:24%;
+}
+
+.backgroundSheet2:nth-child(19)
+{
+	top: 14%;
+	right:28%;
+}
+
+.backgroundSheet2:nth-child(20)
+{
+	top: 16%;
+	right:32%;
+}
+
+.backgroundSheet2:nth-child(21)
+{
+	top: 18%;
+	right:36%;
+}
+
+.backgroundSheet2:nth-child(22)
+{
+	top: 20%;
+	right:40%;
+}
+.backgroundSheet2:nth-child(23)
+{
+	top: 22%;
+	right:44%;
+}
+.backgroundSheet3
+{
+	position: absolute;
+	box-shadow: 0px 0px 3px 3px grey;
+	right:44%;
+	top: 22%;
+	width:12%;
+	height:100%;
+	background: #e0e0d1;
+	border: 1px solid grey;
+	
+}
+
+.logoText
+{
+	position: absolute;
+	width: 55%;
+	left:23%;
+	height: 63%;
+	top:35%;
+	background: #e0e0d1;
+	opacity: 0.7;
+	font-size: 50px;
+	font-weight: bold;
+	color: #006699;
+	border: 1px solid grey;
+	text-align: center;
+}
+
+
+#hiddenMenuContainer
+{
+	position:relative;
+	margin: auto;
+	width:515px;
+}
+#hiddenMenu
+{
+	width:515px;
+	position: fixed;
+	top: -250px;
+	z-index:2;
+	margin:auto;
+}
+#mainMenu
+{
+	margin-top: 30px;
+	z-index: 3;
+	position:relative;
+}
+ul {
+	border: 1px solid grey;
+	z-index: 5;
+}
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 180px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: #0088cc;
+	z-index: 5;
+}
+.second-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu
+{
+	font-size: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	list-style-type: none;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 514px;
+
+}
+
+.top-level-menu > li
+{
+	
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 20%;
+   	background:  #0088cc;
+	margin: 0px;
+	
+}
+.top-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: 18px sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    text-align: center;
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+
+.top-level-menu a:hover { color: #000000; }
+a{
+	text-decoration: none;
+}
+
+#form, #delete
+{
+	background: #0088cc;
+	color: white;
+	font-size: 20px;	
+}
+ #delete{
+	 margin-bottom: 20px;
+ }
+#signoutPic{
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+
+.tableRow
+{
+	width: auto; 
+	font-size: 0px;
+	border-bottom: 1px solid grey;
+}
+
+.notSelectedColor	{background: #ffffff; color: black;}
+.dayInColor			{background: #ffff80; color: black;}
+.dayOffColor		{background: #c3c3a2; color: black;}
+.holidayColor		{background: #d5ff80; color: black;}
+.unpaidHolColor		{background: #e6ffe6; color: black;}
+.halfInHalfOffColor	{background: #e6ffb3; color: black;}
+.dayInSickColor		{background: #ffcccc; color: black;}
+.sicknessColor		{background: #ff9999; color: black;}
+.absenceColor		{background: #ccebff; color: black;}
+.familyLeaveColor	{background: #ffcc99; color: black;}
+.bereavementColor	{background: #4d4d4d; color: white;}
+.compassionateColor	{background: #ffe6cc; color: black;}
+
+.startTimeColor		{background: #e1e1d0; color: #000000;}
+.endTimeColor		{background: #c3c3a2; color: #000000;}
+.nextMorning		{background: #6b6b47; color: white;}
+.invalidForm		{background: #ff8080; color: white;}
+
+.notSelectedDiv		{visibility: hidden;}
+.holidayDiv			{visibility: hidden;}
+.sicknessDiv		{visibility: hidden;}
+.dayOffDiv			{visibility: hidden;}
+.absenceDiv			{visibility: hidden;}
+.familyLeaveDiv		{visibility: hidden;display: inline-block;}
+.bereavementDiv		{visibility: hidden;}
+.dayInSickDiv		{visibility: hidden;}
+.unpaidHolDiv		{visibility: hidden;}
+.compassionateDiv	{visibility: hidden;}
+
+.tableDataRelative {position: relative;}
+
+.absoluteDivSick {border-left: 0px;}
+.rightButton:hover, .leftButton:hover {color: grey;}
+
+#buttonLeftFake{display:none;}
+#buttonRightFake{display:none;}
+#buttonUpFake{display:none;}
+#buttonDownFake{display:none;}
+#fastForwardFake{display:none;}
+#fastBackwardFake{display:none;}
+#buttonRightFakeHidden{display:none;}
+#buttonLeftFakeHidden{display:none;}
+
+
+#fastForward:hover, #fastForwardFake:hover, #fastBackward:hover, #fastBackwardFake:hover {color: grey;}
+
+
+/*creating fast forward/backward buttons*/
+span.top
+{
+	vertical-align: top;
+	line-height: 0px;
+}
+span.bottom
+{
+	vertical-align: bottom;
+}
+
+/*end------------------------------------------------------------------------------------------------------------------------------*/
+
+#table, .tableCalendarGen
+{
+	margin: auto;
+	width: 515px;
+	border: 1px solid grey;
+	border-bottom: 1px solid grey;
+	margin-bottom: 5px;
+	display: table;
+	background:white;
+	margin-bottom: -1px;
+}
+.tableCalendarGen
+{
+	width: 492px;
+}
+
+.nodisplay{
+	display:none;
+}
+.noDisplaySmallScreen
+{
+	display: initial;
+
+	
+}
+.displayBlock {
+	display: block;
+}
+#paySavingsDiv
+{
+	
+	position:relative;
+	width: 515px;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+}
+#payChristmasSavings
+{
+	position:absolute;
+	left:0;
+	top:0;
+	width: 170px;
+	border: 1px solid grey;
+	background: #e6ffcc;
+	font-size: 14px;
+	margin-bottom: 2px;
+}
+#paySummerSavings
+{
+	position:absolute;
+	right:170px;
+	top:0;
+	width: 160px;
+	border: 1px solid grey;
+	background: #e6ffcc;
+	font-size: 14px;
+}
+#loginInfo
+{
+	margin: auto;
+	border: 1px solid grey;
+	background:white;
+	margin-bottom: 10px;
+	font-size: 17px;
+	background: #ffffcc;
+	padding: 2px;
+	width: 511px;
+}
+
+#tableCaption, #tableCaptionHidden
+{
+	width: 515px;
+	background: #0088cc;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 120%;
+	margin: auto;
+	text-align: center;
+	position: relative;
+}
+#tableCaptionContainer
+{
+	position:relative;
+	margin: auto;
+	width:515px;
+}
+#tableCaptionHidden
+{
+	width:514px;
+	height:30px;
+	position: fixed;
+	top: -250px;
+	z-index:1;
+	border-bottom: 1px solid grey;
+}
+
+.tableHeading, .notesName
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 20%;
+}
+
+.tableData
+{
+	display: inline-block;
+	font-size:20px;
+	width:auto;
+}
+
+.typeOfDaySelect
+{
+	width: 120px;
+	outline:none;
+	border: 0px;
+	margin-left: 1px;
+	border-right: 1px solid grey;	
+	font-size: 16px;
+}
+.hourMinuteSelect
+{
+	border: 0px;
+	border-left: 1px solid grey;
+	outline: none;
+	width: 45px;
+	height: 30px;
+	font-size: 16px;
+	
+}
+.nextMorningSelect
+{
+	background: #6b6b47;
+	color: white;
+	border: 0px;
+	outline: none;
+	margin:0;
+	border-left: 1px solid grey;
+	width: 45px;
+	height: 30px;
+	font-size: 16px;
+ }
+
+.absoluteDiv
+{
+	width: 99%;
+	height:94%;  
+	position: absolute;
+	top:0;
+	left:0;
+	text-align: center;
+	font-size: 16px; 
+	border-left: 1px solid grey;
+	line-height: 30px;
+}
+
+.dateDiv, .dateDivCalendarGen
+{
+	height:96%;
+	text-align: right;
+	width:105px;
+	padding-right: 5px;
+	/*border-left: 1px solid white;
+	border-top: 1px solid white;*/
+	font-size: 15px;
+}
+.dateDivCalendarGen
+{
+	width:90px;
+}
+
+.dateInput
+{
+	text-align: right;
+	width: 95px;
+	outline: none;
+	border: 0px;
+	margin:0px;
+	padding: 0px;
+	line-height:88%;
+	padding-right: 5px;
+	font-size: 16px;
+}
+.currentDateInput
+{
+	color: #006600;
+	font-weight: bold;
+}
+.currentStartTime
+{
+	box-shadow: 0px 0px 0px 2px green inset;
+	font-weight: bold;
+}
+
+.dateInputHidden
+{
+	visibility: hidden;
+	position: absolute;
+}
+
+.tableBottom, .tableBottom2, .tableBottomBP, .tableBottomDeductions, .tableBottomCG, .tableBottomPE
+{
+	text-align: left;
+	position: relative;
+	font-size: 17px;
+	width: 510px;
+	margin: auto;
+	margin-top: 7px;
+	margin-bottom: 10px;
+}
+.tableBottomCG
+{
+	width: 100%;
+}
+.tableBottomBP
+{
+	height: 30px;
+}
+.tableBottomPE
+{
+	width: 490px;
+}
+.submitSuccessMain, #submitSuccessMain2
+{
+	font-size: 17px;
+	font-weight: bold;
+	width: 70%;
+	color: green;
+	position: absolute;
+	top:0px;
+	font-size: 16px;
+}
+.submitErrorMain
+{
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	color: red;
+	background: #ffe6e6;
+	position: absolute;
+	top:0px;
+	font-size: 16px;
+	width: 70%;
+	border: 1px solid black;
+	z-index: 4;
+	padding: 0px 3px 0px 3px;
+}
+
+.submit
+{
+	text-align: right;
+	position: absolute;
+	right:0px;
+	top:0px;
+	font-size: 16px;
+}
+.submit2
+{
+	text-align: right;
+	font-size: 20px;
+	position: absolute;
+	right:0px;
+	top:0px;
+	background: #0088cc;
+	color: white;
+}
+
+.buttonAlign
+{
+	background: #ffffcc;
+	text-align: right;
+	position: relative;
+	font-size: 17px;
+}
+#submitSuccess
+{
+	background: #ffffcc;
+	font-size: 17px;
+	font-weight: bold;
+	color: green;
+	position: absolute;
+	left:50%;
+	bottom:1px;
+}
+.otherPayment
+{
+	text-align: right;
+	position: absolute;
+	left:0px;
+	top:7px;
+	font-size: 16px;
+}
+.rightButton
+{
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	right:0px;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 37px;
+	line-height: 85%;
+}
+
+.leftButton
+{
+	width: auto;
+	height: 100%;
+	position: absolute;
+	left:5px;
+	top: 0px;
+	color: white;
+	text-align: right;
+	font-size: 37px;
+	line-height: 85%;
+}
+.noteDiv
+{
+	border-left: 1px solid grey;
+	margin-left: 1px;
+	width: 100px;
+}
+.noteInput
+{
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	font-size: 20px;
+	width: 98px;
+	height: 27px;
+	line-height: 30px;
+	text-indent: 5px;
+}
+/*.alignRight
+{
+	position: absolute;
+	color: white;
+	top: 0px;
+	right: 5px;
+	font-size: 32px;
+}*/
+/*fast forwar - backward button---*/
+#fastForward, #fastForwardFake
+{
+	width: 15px;
+	height: 25px;
+	position: absolute;
+	top:0px;
+	right: 50px;
+	line-height: 85%;
+	font-size: 26px;
+}
+
+#fastBackward, #fastBackwardFake
+{
+	width: 15px;
+	height: 25px;
+	position: absolute;
+	top:0px;
+	left: 50px;
+	line-height: 85%;
+	font-size: 26px;
+}
+
+
+
+/*calendar section--------------------------------------------*/
+#calendar
+{
+	margin: auto;
+	margin-top: 40px;
+	border: 1px solid grey;
+	width: 512px;
+	background: white;
+	display: table;
+	margin-bottom: 10px;
+}
+.calendar
+{
+	width: auto;
+	height: auto;
+	font-size: 16px;
+}
+
+.calendarCaption, #calendarCaption
+{
+	width: auto;
+	background: #0088cc;
+	padding: 2px;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 120%;
+	display: table-caption;
+	text-align: center;
+	position: relative;
+}
+.calendarHeading
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 12.5%;
+	height: auto;
+}
+.dayDiv
+{
+	color: black;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 12.5%;
+	height: auto;	
+}
+.currentDay
+{
+	box-shadow: 0px 0px 0px 4px green inset;
+}
+.monthDiv
+{
+	background: #0088cc;
+	color: white;
+}
+
+.currentWeek
+{
+	border-top: 1px solid #ff3333;
+	border-bottom: 1px solid #ff3333;
+	position: relative;
+}
+.currentWeekFilter
+{
+	background: #ff3333;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	opacity: 0.1;	
+	height: 100%;
+	width: 100%;
+	
+}
+/*----------payments section----------------------*/
+#payments, #deductions, #yearToDate, #yearToDateII, #weeklyAverages, #dayStatistics, #dailyAverages, #yearToDateLast12Weeks,
+ #holidayStatistics, #backPayPayments, #totalsDeductions, #hourlyAverages, #yearToDatePercentage, #yearToDateHours, #totalsHours,
+ #totalsDays
+{
+	margin: auto;
+	margin-top: 0px;
+	border: 1px solid grey;
+	width: 510px;
+	display: table;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+#weeklyAveragesInfo, #yearToDateIIInfo, #dayStatisticsInfo, #dayStatisticsInfo, #dailyAveragesInfo, #employmentInfoInfo,
+#basicPayInfo, #unsocialPayInfo, #overtimePayInfo, #bankholPayInfo, #holidayPayInfo, #sickBerCompPayInfo, #addPayInfo, 
+#taxAndNIInfo, #pensionInfo, #studentLoanInfo, #savingsInfo, #addDeductionsInfo, #berCompPayInfo, #yearToDateLast12WeeksInfo,
+#holidayStatisticsInfo, #weekendPayInfo, #backPayInfo, #CGInfo, #hourlyAveragesInfo, #yearToDatePercentageInfo,
+#yearToDateHoursInfo, #otherPaymentsInfo
+{
+	margin: auto;
+	width: 96%; /*padidinimas per javascript iki 96**/
+	height:auto;  
+	position: absolute;
+	top:0;
+	left:0;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 16px; 
+	box-shadow: 0px 0px 1px 1px grey inset;
+	text-indent: 20px;
+	background:  #e6ffcc;
+	visibility: hidden;
+	z-index: 1;
+}
+.border
+{
+	margin: auto;
+	margin-top: -10px;
+	width: 510px;
+	border: 1px solid grey;
+	border-top: 0px;
+}
+.chartStyle
+{
+	background: #ffffcc;
+	height: 250px;
+	width: 100%;
+	text-align: center;
+	position:relative;
+	color: #ffbb99;
+	font-weight: bold;
+	font-size: 25px;
+}
+.marginBottom
+{
+	margin-bottom: 10px;
+}
+.diagramOnly
+{
+	margin-top: 0px;
+	border: 1px solid grey;
+}
+#backPayInfo{
+	margin-top: 30px;
+}
+.paymentsCaption
+{
+	margin: auto;
+	width: 502px;
+	background: #0088cc;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 110%;
+	text-align: center;
+	padding: 5px;
+	margin-top: 10px;
+	position: relative;
+}
+.paymentsCaptionLeftAllign
+{
+	text-align: left;
+	font-size: 110%;
+}
+
+#weeklyAveragesInfoHide, #yearToDateTotalsInfoHide, #dayStatisticsInfoHide, #dailyAveragesInfoHide, #employmentInfoHide,
+#basicPayInfoHide,#unsocialPayInfoHide, #overtimePayInfoHide, #bankHolPayInfoHide, #holidayPayInfoHide, #sickBerCompPayInfoHide,
+#addPayInfoHide, #taxAndNIInfoHide, #studentLoanInfoHide, #savingsInfoHide, #addDeductionsInfoHide, #berCompPayInfoHide,
+#yearToDateLast12WeeksInfoHide, #holidayStatisticsInfoHide, #pensionInfoHide,#weekendPayInfoHide, #backPayInfoHide, #CGInfoHide,
+#hourlyAveragesInfoHide, #yearToDatePercentageInfoHide, #yearToDateTotalsHoursInfoHide, #otherPayInfoHide
+{
+	visibility:hidden;
+	color: #e6ffcc;
+	font-weight: 900;
+	font-size: 35px;
+}
+
+#weeklyAveragesInfoShow, #yearToDateTotalsInfoShow, #dayStatisticsInfoShow, #dailyAveragesInfoShow, #employmentInfoShow,
+#basicPayInfoShow, #unsocialPayInfoShow, #overtimePayInfoShow, #bankHolPayInfoShow, #holidayPayInfoShow, #sickBerCompPayInfoShow,
+#addPayInfoShow, #taxAndNIInfoShow, #studentLoanInfoShow, #savingsInfoShow, #addDeductionsInfoShow, #berCompPayInfoShow,
+#yearToDateLast12WeeksInfoShow, #holidayStatisticsInfoShow, #pensionInfoShow, #weekendPayInfoShow, #backPayInfoShow, #CGInfoShow,
+#hourlyAveragesInfoShow, #yearToDatePercentageInfoShow, #yearToDateTotalsHoursInfoShow, #otherPayInfoShow
+{
+	visibility:visible;
+	font-weight: 900;
+	font-size:40px;
+	
+}
+
+#weeklyAveragesHto£{display:none;}
+#yearToDateTotalsHto£{display:none;}
+#dayStatisticsHto£{display:none;}
+#dailyAveragesHto£{display:none;}
+
+
+.paymentsHeadingMain, .paymentsHeading
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	
+}
+.paymentsHeadingMain
+{
+	width: 43%;
+	text-align: left;
+}
+.paymentsHeading
+{
+	width: 19%;
+}
+
+
+#weekPayments
+{
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+}
+.paymentsDiv
+{
+	width: 35%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+.deductionsNamesDiv
+{
+	width: 45%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+.unitsRate£ppDiv
+{
+	width: 20%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: right;
+}
+.unitsRate£ppDivDeductions
+{
+	width: 53%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: left;
+}
+#deductionsBackground{
+	background: #ffffcc;
+	width: 100%;
+	height: 100%;
+}
+ #weekDeductions
+ {
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	float:left;
+	width: 60%;
+ }
+
+#totalPayments
+{
+	background: #d7d7c1;
+	border-top: 1px solid grey;
+	font-size: 18px;
+	
+}
+#totalGrossPaymentsName
+{
+	background: #d7d7c1;
+	font-size: 18px;
+
+	float: left;
+	width: 50%;
+	display: inline-block;
+	
+}
+#totalGrossPaymentsAmount
+{
+	background: #d7d7c1;
+	font-size: 18px;
+
+	float: left;
+	width: 50%;
+	display: inline-block;
+	text-align: right;
+}
+#totalDeductions
+{
+	background: #d7d7c1;
+	font-size: 18px;
+	border-top: 1px solid grey;
+	float: left;
+	width: 55%;
+}
+#totalDeductionsName
+{
+	background: #d7d7c1;
+	font-size: 18px;
+	float: left;
+	width: 50%;
+	display: inline-block;
+}
+#totalDeductionsAmount
+{
+	background: #d7d7c1;
+	font-size: 18px;
+	text-align: right;
+	float: right;
+	width: 50%;
+	display: inline-block;
+}
+
+#netPay
+{
+	float: right;
+	width: 20%;
+	font-size: 18px;
+	background: #ceff99;
+	border-top: 1px solid grey;
+	display: inline-block;
+	text-indent: 5px;
+	box-shadow: 1px 0px grey inset;
+}
+#netPayAmount
+{
+	float: right;
+	width: 25%;
+	font-size: 18px;
+	background: #ceff99;
+	border-top: 1px solid grey;
+	font-weight: bold;
+	display: inline-block;
+	text-align: right;
+}
+.rightAlign
+{
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+#yearToDateNames, #yearToDateNamesII, #weeklyAveragesNames, #dayStatisticsNames, #dailyAveragesNames, #yearToDateLast12WeeksNames,
+#holidayStatisticsNames, #hourlyAveragesNames, #yearToDatePercentageNames, #yearToDateNamesHours
+{
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	float:left;
+	width: 74%;
+}
+#yearToDateAmount, #yearToDateAmountII, #weeklyAveragesAmount, #dayStatisticsAmount, #dailyAveragesAmount, #yearToDateLast12WeeksAmount,
+#holidayStatisticsAmount, #hourlyAveragesAmount, #yearToDatePercentageAmount, #yearToDateAmountHours
+{
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	float:right;
+	width: 26%;
+	text-align: right;
+
+	position: relative;
+	box-shadow: 1px 0px grey inset;
+}
+ #yearToDateAmountII, #weeklyAveragesAmount, #dayStatisticsAmount, #dailyAveragesAmount, #yearToDateLast12WeeksAmount,
+ #holidayStatisticsAmount, #hourlyAveragesAmount, #yearToDatePercentageAmount, #yearToDateAmountHours
+ {visibility:hidden; }
+ 
+ 
+#yearToDateAmountIIHid, #weeklyAveragesAmountHid, #dayStatisticsAmountHid, #dailyAveragesAmountHid, #yearToDateLast12WeeksAmountHid,
+#holidayStatisticsAmountHid, #hourlyAveragesAmountHid, #yearToDatePercentageAmountHid, #yearToDateAmountHoursHid
+{
+	height: auto;
+	font-size: 18px;
+	background: #e6ffcc;
+	float:right;
+	width: 26%;
+	height: 100%;
+	text-align: center;
+	visibility: visible;
+	position: absolute;
+	right:0px;
+	top: 0px;
+	border-left:1px solid grey;
+	color: #cca300;
+}
+
+.noPremium
+{
+	font-size: 18px;
+	background: #e6ffcc;
+	text-align: center;
+	color: #cca300;
+}
+
+/*------------------------deductions page------------------------------------------------*/
+
+
+.deductionCaption
+{
+	margin: auto;
+	width: 499px;
+	background: #0088cc;
+	border:1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+	position: relative;
+}
+.alignLeftOnSmallScreen
+{
+	text-align: center;
+}
+.brForSmallScreen
+{
+	display: none;
+}
+tr{
+	font-size: 12px;
+	font-weight: ;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid grey;
+}
+th, td
+{
+	font-size: 12px;
+	text-align: center;
+	font-weight: ;
+	padding: 0px;
+	margin: 0px;
+	border: 1px solid grey;
+}
+
+table{
+	
+	margin: auto;
+	padding: 0px;
+}
+/*-----------------------------payments page-----------------------------------------------*/
+#paymentSettings, #employmentInfo, #basicPaySettings, #unsPaySettings, #overtimeSettings, #bankHolSettings, #holidaySettings,
+#sickBerCompSettings, #additionalPaymentSettings, #taxAndNI, #deductionSettings, #pensionDeduction, #studentLoanDeduction,
+#savingsDeductions, #addDeduction, #berCompSettings, #weekendPaySettings, #backPayCalculatorDate, #premiumDiv, #premiumBenefits,
+#premiumSafe, #calendarGeneratorDelete, #calendarGenerator, #deductionsSettings, #otherPaymentSettings
+{
+	margin: auto;
+	border: 1px solid grey;
+	width: 499px;
+	display: table;
+	background: #ffffcc;
+	padding: 5px;
+	font-size: 16px;
+	position: relative;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+#premiumDiv{
+	text-align: center;
+}
+#premiumBenefits, #premiumSafe
+{
+	font-size: 20px;
+	text-indent: 20px;
+	padding-left:10px;
+	width: 494px;
+}
+#premiumBenefits
+{
+	text-align: center;
+}
+
+
+#paymentSettingsEmailDivResponse, #accountPaySetAllowResponse, #accountChangeEmailResponse, #accountChangePasswordResponse, 
+#backPayCalculatorDivResponse, #backPayCalculatorDivResponse2, #submitSuccessDeductions, #submitSuccessPayments,
+#calendarDeleteDivResponse, #calendarGenerateDivResponse, #resetPasswordResponse, #accountChangeNamesResponse
+{
+	background: #ffffcc;
+	font-size: 17px;
+	font-weight: bold;
+	color: green;
+	position: absolute;
+	left:5px;
+	top:5px;
+	width: 70%;
+	text-align: left;
+}
+#backPayCalculatorDivResponse, #backPayCalculatorDivResponse2, #submitSuccessDeductions, #submitSuccessPayments, #calendarDeleteDivResponse,
+#calendarGenerateDivResponse
+{
+	width: 65%;
+	background: #e1e1d0;
+	z-index: 2;
+}
+#submitSuccessDeductions, #submitSuccessPayments
+{
+	width: 80%;
+}
+#accountChangePasswordResponse, #accountChangeEmailResponse, #accountPaySetAllowResponse, #accountChangeNamesResponse
+{
+	width: 85%;
+	margin-left: 18px;
+}
+#resetPasswordResponse
+{
+	left:0px;
+	top:0px;
+	width:90%;
+	margin-left: -8px;
+	background: #e1e1d0;
+}
+#paymentSettingsEmailDivResponse
+{
+	text-align: center;
+	width: 84%;
+	margin-left: 15px;
+}
+
+#UnsocialHours, #overtimeCheckDiv, #overtimeCheckDiv2, #studentLoan, #weekendHours
+{
+	position: relative;
+	
+}
+#hideUnsocialHours, #hideOvertimeCheckDiv, #hideOvertimeCheckDiv2, #hideStudentLoan, #hideWeekendHours
+{
+	width: 100%;
+	height:100%;  
+	top:0;
+	left:0;
+	background: grey;
+	position: absolute;
+	opacity: 0.3;
+}
+
+/*------------Account page ----------------------------------------------*/
+
+/*login page and register page---------------------------------------------------------------------------------------------------------------------*/
+#loginForm, #signout, #register{
+	padding: 15px;
+	background-color: #e1e1d0;
+	border-top: 1px solid grey;
+	width: 470px;
+	margin: auto;
+	font-size: 14px;
+	text-align: center;
+}
+h1{
+	padding: 0px;
+	margin: 0px;
+}
+#loginForm
+{
+	margin-top:40px;
+	background: -ms-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: -moz-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: -webkit-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: -o-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+}
+.g-recaptcha
+{
+	margin: 0;
+	margin: auto;
+	display: table;
+	text-align: center;
+	/*transform:scale(1.2);-webkit-transform:scale(1.2);transform-origin:0 0;-webkit-transform-origin:0 0;*/
+}
+
+.alignCenter
+{
+	margin: auto;
+	margin-left: -3%;
+	height: 25px;
+	margin-bottom: 1px;
+	width: 100%;
+}
+.tableLogin, .infoAbout
+{
+	
+	margin-top: 110px;
+	margin: auto;
+	border-top: solid 1px grey;
+	background:  #0088cc;
+	width: 512px;
+	color: white;
+	height: 35px;
+}
+.tableLogin{
+	text-align:center;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+.infoAboutTop, .premiumBenefitsTop
+{
+	width: 512px;
+	font-size: 20px;
+	color: #006699;
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 0px;
+	position: relative;
+	height: 30px;
+}
+.premiumBenefitsUnderneath
+{
+	
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100px;
+	width: 50%;
+	
+	background: -ms-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: -moz-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: -webkit-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: -o-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+}
+.premiumBenefitsUnderneath2
+{
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100px;
+	width: 50%;
+	
+	background: -ms-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: -moz-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: -webkit-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: -o-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+}
+.roundDiv
+{
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	position: absolute;
+	top: 0px;
+	left: 65%;
+	background: #e1e1d0;
+	border: 30px solid #ffc;
+	box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.infoAbout
+{
+	width: 504px;
+	font-size: 20px;
+	color: #006699;
+	background: #ffc;
+	border: 0px;
+	margin-top: 0px;
+	margin-bottom: 60px;
+	text-shadow: 2px 2px 4px #000000;
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	
+	background: -ms-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: -moz-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: -webkit-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: -o-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	
+}
+
+#about, .about{
+	
+	padding: 5px;
+	margin: auto;
+	margin-top: 35px;
+	font-size: 18px;
+	text-align: center;
+	width: 500px;
+	box-shadow: 10px 10px 5px #aaaaaa;
+	background: #ffc;
+	background: -ms-linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	background: -moz-linear-gradient(135deg,#ffffcc 85%, #ffffe6 95%);
+	background: -webkit-linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	background: -o-linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	background: linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	position: relative;
+	
+	-o-transform:rotate(1deg);
+	-webkit-transform:rotate(1deg);
+	-moz-transform:rotate(1deg);
+	
+}
+.aboutRight
+{
+	box-shadow: -10px 10px 5px #aaaaaa;
+}
+.aboutTiltedRight{
+	-o-transform:rotate(-1deg) ;
+	-webkit-transform:rotate(-1deg);
+	-moz-transform:rotate(-1deg);
+}
+
+.pin{
+  background-color: #aaa;
+  background-image: linear-gradient(left, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2));
+  display: block;
+  height: 2em;
+  left: 0;
+  top: 0;
+  margin: -1.3em 0.2em;
+  position: absolute;
+  width: .1em;
+}
+.pinRight
+{
+  background-color: #aaa;
+  background-image: linear-gradient(left, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2));
+  display: block;
+  height: 2em;
+  right: 0;
+  top: 0;
+  margin: -1.0em 0.5em;
+  position: absolute;
+  width: .1em;
+}
+.pin:after, .pinRight:after {
+  background-color: skyBlue;
+  background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2));
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+              inset .2em .2em .2em hsla(0,0%,100%,.2),
+              inset -.2em -.2em .2em hsla(0,0%,0%,.2),
+              1.5em 1.25em .25em hsla(0,0%,0%,.15);
+  content: '';
+  height: .8em;
+  left: -.35em;
+  position: absolute;
+  top: -.65em;
+  width: .8em;
+}
+.pin:before, .pinRight:before {
+  background-color: hsla(0,0%,0%,.1);
+  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+  content: '';
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  top: .5em;
+  transform: rotate(57.5deg);
+  transform-origin: 50% 100%;
+  width: .1em;
+}
+
+.account{
+	background-color: #ffffcc;
+	border: solid 1px grey;
+	width: 482px;
+	margin: auto;
+	font-size: 15px;
+	padding: 15px;
+	margin-bottom: 10px;
+	position: relative;
+	text-align: center;
+}
+.contactUs
+{
+	font-size: 20px;
+	text-align:left;
+}
+
+.registerText
+{
+	margin: auto;
+	color: white;
+	font-weight: bold;
+	font-size: 28px;
+	background: #009933;
+	text-align: center;
+	width: 260px;
+	height: 40px;
+	border: 1px solid grey;
+}
+
+.registerButton{
+	width: 100%;
+	text-align: center;
+	padding: 0px;
+	
+}
+.loginButton
+{
+	text-align: center;
+	font-size: 25px;
+	background: #0088cc;
+	color: white;
+	width: 475px;
+	margin-left:-15px;
+	height: 35px;
+	font-weight: bold;
+}
+.loginButtonAccount{
+	margin-left: 0px;
+	width: 86%;
+	background: #adebad;
+	color: grey;
+	margin-left:-27px;
+	height: 35px;
+	font-size: 25px;
+	font-weight: bold;
+}
+.alignCenterAccount
+{
+	width: 90%;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.alignCenterPayments
+{
+	margin:0px;
+	margin-left: 26px;
+	width: 83%;
+}
+/*backpaypage------------------------------------------*/
+.BPCaption
+{
+	width: auto;
+	height: 30px;
+	background: #0088cc;
+	padding: 2px;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 20px;
+	display: table-caption;
+	text-align: center;
+	position: relative;
+	
+}
+#backPayPayments, #totalsDeductions, #totalsHours, #totalsDays
+{
+	background: #ffffcc;
+}
+.totalsCaption
+{
+	width: 500px;
+}
+.checkboxNoPadding
+{
+	padding: 0px;
+	margin: 0px;
+}
+.submitSuccessBP
+{
+	border: 0px;
+	color: red;
+}
+.submitSuccessBPErorrs
+{
+	color: red  !important;
+	border: 1px solid black;
+	background: #ffe6e6 !important;
+	z-index: 4;
+	padding: 0px 3px 0px 3px;
+}
+
+
+.paymentsHeadingMainBP, .paymentsHeadingBP, .paymentsHeadingIncludeBP
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	
+}
+.paymentsHeadingMainBP
+{
+	width: 40%;
+	text-align: left;
+}
+.paymentsHeadingBP
+{
+	width: 23%;
+}
+.paymentsHeadingIncludeBP
+{
+	width: 14%;
+	text-align: left;
+}
+.backPayPaymentsNames
+{
+	width: 36%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+
+.backPayPaymentsUnits, .backPayPaymentsAmount
+{
+	width: 24%; /*24 for ie*/
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: right;
+}
+.backPayAmountInput
+{
+	text-align: right;
+	width: 100%;
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	line-height:100%;
+	font-size: 18px;
+	background: #ffffcc;
+	margin: 0px;
+	padding:0px;
+	
+}
+.backPayAmountResult
+{
+	text-align: right;
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	font-size: 18px;
+	background: #ffffcc;
+	margin: 0px;
+	padding:0px;
+	text-align: left;
+	font-weight: bold;
+}
+.backPayPaymentsInclude
+{
+	width: 12%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: center;
+}
+.changeFont
+{
+	font-size: 17px;
+}
+#backPayCalculator
+{
+	display:none;
+}
+
+/*totals calculator page----------------------------------------------------------------*/
+.totalsPaymentsNames, .totalsDeductionsNamesDiv, .totalsDeductionsAmountDiv
+{
+	width: 45%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+.totalsDeductionsNamesDiv
+{
+	width: 70%;
+}
+.totalsDeductionsAmountDiv
+{
+	width: 28%;
+}
+
+
+.totalsPaymentsUnits, .totalsPaymentsAmount
+{
+	width: 25%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: right;
+}
+.paymentsHeadingMainTotals, .paymentsHeadingTotals, .totalsDeductionsUnitsHeading, .totalsDeductionsAmountHeading
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	
+}
+.paymentsHeadingMainTotals
+{
+	width: 52%;
+	text-align: left;
+}
+.paymentsHeadingTotals
+{
+	width: 24%;
+}
+.totalsDeductionsUnitsHeading
+{
+	width: 70%;
+	text-align: left;
+}
+.totalsDeductionsAmountHeading
+{
+	width: 30%;
+	text-align: left;
+}
+/*--------------------------------calendar generator page----------------------------*/
+#removeRow
+{
+	position: absolute;
+	right:100px;
+	top: 0px;
+}
+.tableHeadingCG, .tableHeadingCGDayName, .tableHeadingCGStartEndTime
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 24%;
+}
+.tableHeadingCGDayName
+{
+	width: 38%;
+}
+.tableHeadingCGStartEndTime
+{
+	width: 19%;
+}
+/*-------------footer---------------*/
+#footer
+{
+	margin: auto;
+	margin-top: 10px;
+	width: 512px;
+	background: #e1e1d0;
+	border-top: 1px solid grey;
+	position: relative;
+	height: 140px;
+}
+#socialIcons
+{
+	position: absolute;
+	top:5%;
+	left:0;
+	width:55%;
+}
+#policies
+{
+	position: absolute;
+	top:5%;
+	right:0;
+	width:45%;
+	font-size: 16px;
+}
+#footerBottom
+{
+	position: absolute;
+	bottom:-5%;
+	right:30%;
+	width:45%;
+}
+.policiesHover{
+	text-decoration:none;
+}
+.policiesHover:link{color:black;}
+.policiesHover:visited{color:black;}
+.policiesHover:hover{color:grey;}
+.policiesHover:active{color:grey;}
+
+/*------------------------------------------------------------User Guide----------------------------------------------------------*/
+.textIndent{text-indent: 30px;}
+.paddingLeft{padding-left: 30px;}
+.noBorder{border: 0px;}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 668px){
+
+
+select, input{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: 15px;
+	background: white;
+	border: 1px solid black;
+	margin-left: 1px;
+	margin-bottom: 1px;
+}
+input[type=checkbox]
+{
+	-webkit-appearance:checkbox;
+}
+
+.dateInput
+{
+	text-align: right;
+	width: 90px;
+	outline: none;
+	border: 0px;
+	overflow: hidden;
+	line-height: 100%;
+	font-size: 17px;
+	margin: 0px;
+	padding: 0px;
+}
+.dateDiv
+{
+	height: 100%;
+	width: 100px;
+	margin: 0px 0px 0px 0px;
+	font-size: 15px; 
+	line-height: 100%;
+	border-left: 1px solid grey;
+	border-right: 0px solid grey;
+}
+
+.hourMinuteSelect
+{
+	border: 0px;
+	outline: none;
+	margin:0;
+	border-left: 1px solid grey;
+	font-size: 20px;
+	width: 48px;
+	height: 40px;
+	text-align: center;
+}
+.nextMorningSelect
+{
+	background: #6b6b47;
+	color: white;
+	border: 0px;
+	outline: none;
+	margin:0;
+	border-left: 1px solid grey;
+	font-size: 20px;
+	width: 48px;
+	height: 40px;
+ }
+.typeOfDaySelect
+{
+	width: 100px;
+	outline:none;
+	border: 0px;
+	margin-left: 0px;	
+	font-size: 20px;
+}
+.noteDiv
+{
+	border-left: 1px solid black;
+	margin-left: 1px;
+	width: 100px;
+}
+.noteInput
+{
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	font-size: 20px;
+	width: 95px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.nextMorning {background: black; color: black;}
+
+.finishSameDay	{background: #e1e1d0; color: #000000;}
+
+}
+
+.chartStyle
+{
+	background: #ffffcc;
+	height: 250px;
+	width: 510px;
+	text-align: center;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 400px) 
+{
+	
+.contactUs
+{
+	font-size: 20px !important;
+	text-align: left !important;
+}	
+.iframe {
+	width: 340px;
+	height: 150px;
+}	
+.paymentsHeadingMain, .paymentsHeading
+{
+	
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	
+}
+.paymentsHeadingMain
+{
+	width: 37%;
+	text-align: left;
+}
+.paymentsHeading
+{
+	width: 21%;
+}	
+	
+
+#hiddenMenuContainer
+{
+	position:relative;
+	margin: auto;
+	width:364px;
+}
+#hiddenMenu
+{
+	width:364px;
+	display: initial;
+	position: fixed;
+	top: -250px;
+	z-index:2;
+}
+#mainMenu
+{
+	margin-top: 110px;
+	z-index: 3;
+	position:relative;
+}
+ul {
+	border: 1px solid grey;
+	
+}
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 160px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: #0088cc;
+	z-index: 5;
+}
+.second-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu
+{
+	font-size: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	list-style-type: none;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 362px;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    display: inline-block;
+    height: 30px;
+   	background:  #0088cc;
+	margin: 0px;
+	width:24%;
+	margin-top:;
+}
+.top-level-menu > li:nth-child(1) 
+{
+	width:20%
+}
+.top-level-menu > li:nth-child(5) 
+{
+	width:8%
+}
+.top-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: 17px sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 0px;
+    text-align: center;
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+
+.top-level-menu a:hover { color: #000000; }
+a{
+	text-decoration: none;
+}
+
+select, input{
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 15px;
+   background: white;
+  border: 1px solid black;
+}
+input[type=checkbox]
+{
+	-webkit-appearance:checkbox;
+}
+#table
+{
+	
+	border-bottom: 1px solid grey;
+	margin-bottom: 5px;
+	display: table;
+	background:white;
+	margin-bottom: -1px;
+	width: 362px;
+}
+#tableCaption, #tableCaptionHidden
+{
+	width: 362px;
+	background: #0088cc;
+	height: 30px;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 100%;
+	
+	text-align: center;
+	position: relative;
+}
+#tableCaptionContainer
+{
+	position:relative;
+	margin: auto;
+	width:362px;
+}
+#tableCaptionHidden
+{
+	width:362px;
+	height:30px;
+	position: fixed;
+	top: -250px;
+	z-index:1;
+	border-bottom: 1px solid grey;
+}
+#loginInfo
+{
+	margin: auto;
+	border: 1px solid grey;
+	background:white;
+	margin-bottom: 10px;
+	font-size: 15px;
+	background: #ffffcc;
+	padding: 2px;
+	width: 358px;
+}
+
+.tableHeading
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 25%;
+}
+.tableData
+{
+	display: inline-block;
+	font-size:15px;
+	width:auto;
+}
+
+#paySavingsDiv
+{
+	position:relative;
+	margin: auto;
+	width: 355px;
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+#payChristmasSavings
+{
+	position:absolute;
+	left:0;
+	top:0;
+	width: 170px;
+	border: 1px solid grey;
+	background: #e6ffcc;
+	font-size: 14px;
+	margin-bottom: 2px;
+	display: none;
+}
+#paySummerSavings
+{
+	position:absolute;
+	left:170px;
+	top:0;
+	width: 160px;
+	border: 1px solid grey;
+	background: #e6ffcc;
+	font-size: 14px;
+	display: none;
+}
+.absoluteDiv
+{
+	width: 99%;
+	height:89%;   /*mob versijai 83%, o top 9%*/
+	position: absolute;
+	top:0px;
+	left:0;
+	text-align: center;
+	font-size: 15px; 
+	margin: 0px 0px 0px 0px;
+	border-left: 1px solid grey;
+}
+.dateInput
+{
+	text-align: right;
+	width: 95px;
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	line-height:100%;
+	font-size: 17px;
+	margin: 0px;
+	padding: 0px;
+		
+}
+.currentDateInput
+{
+	color: #006600;
+	font-weight: bold;
+	
+}
+
+.dateDiv
+{
+	height:100%;
+	width: 100px;
+	margin:0px 0px 0px 0px;
+	
+	font-size: 17px; 
+	line-height:100%;
+	border-left: 1px solid grey;
+	border-right: 0px solid grey;
+	
+}
+.hourMinuteSelect
+{
+	border: 0px;
+	outline: none;
+	margin:0;
+	border-left: 1px solid grey;
+	font-size: 20px;
+	width: 41px;
+	height: 30px;
+	text-align: center;
+}
+.tableBottom, .tableBottom2, .tableBottomBP
+{
+	text-align: right;
+	position: relative;
+	font-size: 17px;
+	width: 360px;
+	margin: auto;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.tableBottomBP
+{
+	height: 30px;
+}
+.tableBottomPE
+{
+	width: 340px;
+	margin-left: 10px;
+}
+.submitSuccessMain, #submitSuccessMain2
+{
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	color: green ;
+	position: absolute;
+	top:0px;
+	font-size: 16px;
+	width: 60%;
+}
+.submitErrorMain
+{
+	font-size: 17px;
+	font-weight: bold;
+	text-align: left;
+	color: red;
+	background: #ffe6e6;
+	position: absolute;
+	top:0px;
+	font-size: 16px;
+	width: 60%;
+	border: 1px solid black;
+	z-index: 4;
+	padding: 0px 3px 0px 3px;
+}
+#tableCaptionTitle
+{
+	width: 369px;
+}
+
+
+#weeklyAveragesInfoHide, #yearToDateTotalsInfoHide, #dayStatisticsInfoHide, #dailyAveragesInfoHide, #employmentInfoHide,
+#basicPayInfoHide,#unsocialPayInfoHide, #overtimePayInfoHide, #bankHolPayInfoHide, #holidayPayInfoHide, #sickBerCompPayInfoHide,
+#addPayInfoHide, #taxAndNIInfoHide, #studentLoanInfoHide, #savingsInfoHide, #addDeductionsInfoHide, #berCompPayInfoHide,
+#yearToDateLast12WeeksInfoHide, #holidayStatisticsInfoHide, #pensionInfoHide,#weekendPayInfoHide, #backPayInfoHide, #CGInfoHide,
+#hourlyAveragesInfoHide, #yearToDatePercentageInfoHide, #yearToDateTotalsHoursInfoHide, #otherPayInfoHide
+{
+	visibility:hidden;
+	color: #e6ffcc;
+	padding: 5px;
+	font-weight: 900;
+	font-size: 25px;
+	
+}
+#weeklyAveragesInfoShow, #yearToDateTotalsInfoShow, #dayStatisticsInfoShow, #dailyAveragesInfoShow, #employmentInfoShow,
+#basicPayInfoShow, #unsocialPayInfoShow, #overtimePayInfoShow, #bankHolPayInfoShow, #holidayPayInfoShow, #sickBerCompPayInfoShow,
+#addPayInfoShow, #taxAndNIInfoShow, #studentLoanInfoShow, #savingsInfoShow, #addDeductionsInfoShow, #berCompPayInfoShow,
+#yearToDateLast12WeeksInfoShow, #holidayStatisticsInfoShow, #pensionInfoShow, #weekendPayInfoShow, #backPayInfoShow, #CGInfoShow,
+#hourlyAveragesInfoShow, #yearToDatePercentageInfoShow, #yearToDateTotalsHoursInfoShow, #otherPayInfoShow
+{
+	visibility:visible;
+	font-weight: 900;
+	font-size: 30px;
+	padding: 5px;
+}
+.border
+{
+	margin: auto;
+	margin-top: -10px;
+	width: 362px;
+	border: 1px solid grey;
+	border-top: 0px;
+}
+.chartStyle
+{
+	background: #ffffcc;
+	height: 250px;
+	width: 100%;
+}
+.marginBottom
+{
+	margin-bottom: 10px;
+}
+.diagramOnly
+{
+	margin-top: 0px;
+}
+
+.nextMorningSelect
+{
+	background: #6b6b47;
+	color: white;
+	border: 0px;
+	outline: none;
+	margin:0;
+	border-left: 1px solid grey;
+	font-size: 20px;
+	width: 41px;
+	height: 30px;
+ }
+.typeOfDaySelect
+{
+	width: 91px;
+	outline:none;
+	border: 0px;
+	margin-left: 0px;	
+	font-size: 17px;
+}
+
+
+.startTimeColor		{background: #e1e1d0; color: #000000;}
+.endTimeColor		{background: #c3c3a2; color: #000000;}
+.nextMorning		{background: #6b6b47; color: white;}
+.invalidForm		{background: #ff8080; color: white;}
+
+#calendar
+{
+	margin-top: 40px;
+	border: 1px solid grey;
+	width: 362px;
+	display: table;
+}
+.calendar
+{
+	width: auto;
+	height: auto;
+	font-size: 13px;
+}
+
+#calendarCaption
+{
+	width: auto;
+	background: #0088cc;
+	padding: 2px;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 110%;
+	display: table-caption;
+	text-align: center;
+	position: relative;
+}
+
+.deductionCaption
+{
+	width: 358px;
+	height: 30px;
+	background: #0088cc;
+	padding: 2px;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 110%;
+	position: relative;
+	text-align: center;
+}
+.calendarHeading
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 18px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 12.5%;
+	height: auto;
+}
+.dayDiv
+{
+	color: black;
+	font: 22px sans-serif;
+	display: inline-block;
+	text-align: center;
+	width: 12.5%;
+	height: auto;	
+}
+.monthDiv
+{
+	background: #0088cc;
+	color: white;
+}
+
+.noteDiv, .notesName{display:none;}
+.deductionsNamesDiv
+{
+	width: 45%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+#totalDeductions
+{
+	background: #d7d7c1;
+	font-size: 18px;
+	border-top: 1px solid grey;
+	float: left;
+	width: 60%;
+}
+#totalDeductionsName
+{
+	background: #d7d7c1;
+	font-size: 18px;
+	float: left;
+	width: 75%;
+	display: inline-block;
+}
+#totalDeductionsAmount
+{
+	background: #d7d7c1;
+	font-size: 18px;
+	float: left;
+	width: 25%;
+	display: inline-block;
+}
+
+#netPay
+{
+	float: right;
+	width: 20%;
+	font-size: 18px;
+	background: #ceff99;
+	border-top: 1px solid grey;
+	display: inline-block;
+	box-shadow: 1px 0px grey inset;
+}
+#netPayAmount
+{
+	float: right;
+	width: 20%;
+	font-size: 18px;
+	background: #ceff99;
+	border-top: 1px solid grey;
+	font-weight: bold;
+	display: inline-block;
+	text-align: right;
+}
+.paymentsCaption
+{
+	margin: auto;
+	width: 352px;
+	background: #0088cc;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 110%;
+	text-align: center;
+	padding: 5px;
+	margin-top: 10px;
+	position: relative;
+}
+#payments, #deductions, #yearToDate, #yearToDateII, #weeklyAverages, #dayStatistics, #dailyAverages, #yearToDateLast12Weeks, 
+#holidayStatistics, #backPayPayments, #totalsDeductions, #hourlyAverages, #yearToDatePercentage, #yearToDateHours, #totalsHours,
+#totalsDays
+{
+	margin: auto;
+	margin-top: 0px;
+	border: 1px solid grey;
+	width: 362px;
+	background: white;
+	display: table;
+	position: relative;
+	margin-bottom: 10px;
+	
+}
+/*------------------------deductions page------------------------------------------------*/
+
+/*#deductionSettings
+{
+	margin: auto;
+	
+	border: 2px solid black;
+	width: 352px;
+	display: table;
+	background: #ffff99;
+	padding: 5px;
+}*/
+/*-----------------------------payments page-----------------------------------------------*/
+#paymentSettings, #employmentInfo, #basicPaySettings, #unsPaySettings, #overtimeSettings, #bankHolSettings, #holidaySettings, 
+#sickBerCompSettings, #additionalPaymentSettings, #taxAndNI, #deductionSettings, #pensionDeduction, #studentLoanDeduction,
+#savingsDeductions, #addDeduction, #berCompSettings, #weekendPaySettings, #backPayCalculatorDate, #premiumDiv, #premiumBenefits,
+#premiumSafe, #calendarGeneratorDelete, #calendarGenerator, #deductionsSettings, #otherPaymentSettings
+{
+	width: 352px;
+	font-size: 16px;
+}
+.width300px
+{
+	width: 300px;
+	margin-left: 26px;
+}
+#premiumDiv{
+	text-align: center;
+	font-size: 20px;
+}
+#premiumBenefits, #premiumSafe
+{
+	text-indent:20px;
+	padding-left:5px;
+	font-size: 20px;
+}
+#premiumBenefits
+{
+	text-align: center;
+}
+#paymentsUpdateButtonDiv, #deductionsUpdateButtonDiv 
+{
+	margin-top: 40px;
+	background: #e1e1d0;
+	width: 352px;
+	position: relative;
+}
+
+.alignLeftOnSmallScreen
+{
+	text-align: left;
+	text-indent: 10px;
+}
+.brForSmallScreen
+{
+	display: initial;
+}
+/*login page---------------------------------------------------------------------------------------------------------------------*/
+#loginForm, #signout, #register{
+	background-color: #e1e1d0;
+	
+	width: 332px;
+	margin: auto;
+	font-size: 15px;
+	text-align: center;
+}
+h1{
+	padding: 0px;
+	margin: 0px;
+}
+#loginForm
+{
+	margin-top:120px;
+	background: -ms-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: -moz-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: -webkit-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: -o-linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+	background: linear-gradient(135deg, #e1e1d0 30%, #ffffcc 50%);
+}
+.g-recaptcha
+{
+	margin: 0;
+	margin-left: -10px;
+	margin-bottom: 13px;
+	margin-top: 2px;
+	display: table;
+	text-align: left;
+	transform:scale(1.16);-webkit-transform:scale(1.16);transform-origin:0 0;-webkit-transform-origin:0 0;
+}
+
+.alignCenter
+{
+	margin: auto;
+	margin-left: -3%;
+	height: 25px;
+	margin-bottom: 1px;
+	width: 100%;
+}
+.tableLogin, .infoAbout
+{
+	margin: auto;
+	margin-top: 110px;
+	border-top: solid 1px grey;
+	background:  #0088cc;
+	width: 362px;
+	color: white;
+	height: 35px;
+}
+.tableLogin{
+	text-align:center;
+	font-size: 25px;
+	font-weight: bold;
+}
+.infoAboutTop, .premiumBenefitsTop
+{
+	width: 362px;
+	font-size: 20px;
+	color: #006699;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	position: relative;
+	height: 30px;
+}
+.premiumBenefitsUnderneath
+{
+	
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100px;
+	width: 50%;
+	
+	background: -ms-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: -moz-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: -webkit-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: -o-linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+	background: linear-gradient(45deg, #e1e1d0 50%, #e6ffcc 50%);
+}
+.premiumBenefitsUnderneath2
+{
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100px;
+	width: 50%;
+	
+	background: -ms-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: -moz-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: -webkit-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: -o-linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+	background: linear-gradient(-45deg, #ffffe6 40%, #e6ffcc 50%);
+}
+.roundDiv
+{
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	position: absolute;
+	top: 0px;
+	left: 70%;
+	background: #ffd6cc;
+	border: 30px solid #ffc;
+	box-shadow: 10px 10px 5px #aaaaaa;
+}
+.infoAbout
+{
+	width: 362px;
+	font-size: 20px;
+	color: #006699;
+	background: #ffc;
+	border: 0px;
+	margin-top: 0px;
+	margin-bottom: 60px;
+	text-shadow: 2px 2px 4px #000000;
+	position: relative;
+	z-index: 2;
+	height: 45px;
+	
+	
+	background: -ms-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: -moz-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: -webkit-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: -o-linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	background: linear-gradient(135deg,#ffffcc 20%, #e1e1d0 25%,#e1e1d0 30%,#ffffcc 45%, #e1e1d0 60%,#e1e1d0 60%,#ffffcc 65%);
+	
+}
+
+#about, .about{
+	
+	padding: 5px;
+	margin: auto;
+	margin-top: 35px;
+	font-size: 18px;
+	text-align: center;
+	width: 312px;
+	box-shadow: 10px 10px 5px #aaaaaa;
+	background: #ffc;
+	background: -ms-linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	background: -moz-linear-gradient(135deg,#ffffcc 85%, #ffffe6 95%);
+	background: -webkit-linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	background: -o-linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	background: linear-gradient(135deg, #ffffcc 85%, #ffffe6 95%);
+	position: relative;
+	
+	-o-transform:rotate(1deg);
+	-webkit-transform:rotate(1deg);
+	-moz-transform:rotate(1deg);
+	
+}
+.aboutRight
+{
+	box-shadow: -10px 10px 5px #aaaaaa;
+}
+.aboutTiltedRight{
+	-o-transform:rotate(-1deg) ;
+	-webkit-transform:rotate(-1deg);
+	-moz-transform:rotate(-1deg);
+}
+
+.pin{
+  background-color: #aaa;
+  background-image: linear-gradient(left, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2));
+  display: block;
+  height: 2em;
+  left: 0;
+  top: 0;
+  margin: -1.3em 0.5em;
+  position: absolute;
+  width: .1em;
+}
+.pinRight
+{
+  background-color: #aaa;
+  background-image: linear-gradient(left, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2));
+  display: block;
+  height: 2em;
+  right: 0;
+  top: 0;
+  margin: -1.0em 0.5em;
+  position: absolute;
+  width: .1em;
+}
+.pin:after, .pinRight:after {
+  background-color: skyBlue;
+  background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.2), hsla(0,0%,0%,.2));
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+              inset .2em .2em .2em hsla(0,0%,100%,.2),
+              inset -.2em -.2em .2em hsla(0,0%,0%,.2),
+              1.5em 1.25em .25em hsla(0,0%,0%,.15);
+  content: '';
+  height: .8em;
+  left: -.35em;
+  position: absolute;
+  top: -.65em;
+  width: .8em;
+}
+.pin:before, .pinRight:before {
+  background-color: hsla(0,0%,0%,.1);
+  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+  content: '';
+  height: 1.5em;
+  left: 0;
+  position: absolute;
+  top: .5em;
+  transform: rotate(57.5deg);
+  transform-origin: 50% 100%;
+  width: .1em;
+}
+.pinRoundDiv{
+	background: black;
+	display: block;
+	height: 2em;
+	left: 0;
+	top: 0;
+	margin: 0.53em 0.38em;
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	border-radius: 7px;
+	opacity: 0.5;
+}
+.pinRoundDiv2{
+	background: black;
+	display: block;
+	height: 2em;
+	right: 0;
+	top: 0;
+	margin: 0.8em 0.35em;
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	border-radius: 7px;
+	opacity: 0.5;
+}
+
+.account{
+	background-color: #ffffcc;
+	border: solid 1px grey;
+	width: 352px;
+	margin: auto;
+	font-size: 15px;
+	padding: 5px;
+	margin-bottom: 10px;
+	text-align:center;
+}
+
+#logoContainer {
+	margin: auto;
+	width: 362px;
+	height: 80px;
+	margin-top: 5px;
+	z-index: 4;
+	position:absolute;
+	top:0px;
+}
+.logoText
+{
+	font-size: 35px;
+}
+
+.registerButton{
+	width: 100%;
+	text-align: center; 
+}
+.loginButton
+{
+	text-align: center;
+	font-size: 25px;
+	background: #0088cc;
+	color: white;
+	width: 350px;
+	height: 35px;
+	margin-left: -3%;
+	font-weight: bold;
+}
+.loginButtonAccount{
+	font-size: 25px;
+	margin-left: auto;
+	width: 200px;
+	background: #adebad;
+	color: grey;
+	height: 35px;
+	font-weight: bold;
+}
+
+.alignCenter
+{
+	margin: auto;
+	margin-left: -3%;
+	height: 25px;
+	margin-bottom: 1px;
+	width: 100%;
+}
+.alignCenterAccount
+{
+	width: 300px;
+	margin-left: 0px;
+}
+.alignCenterPayments
+{
+	width: 80%;
+	margin-left: 10%;
+}
+/*backpaypage------------------------------------------*/
+#backPayPayments, #totalsDeductions, #totalsHours, #totalsDays
+{
+	background: #ffffcc;
+}
+.totalsCaption
+{
+	width: 358px;
+}
+
+.BPCaption
+{
+	width: auto;
+	height: 30px;
+	background: #0088cc;
+	padding: 2px;
+	border: 1px solid grey;
+	border-bottom: 0px;
+	color: white;
+	font-size: 110%;
+	display: table-caption;
+	text-align: center;
+	position: relative;
+}
+.paymentsHeadingMainBP, .paymentsHeadingBP, .paymentsHeadingIncludeBP
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	
+}
+.paymentsHeadingMainBP
+{
+	width: 40%;
+	text-align: left;
+}
+.paymentsHeadingBP
+{
+	width: 25%;
+}
+.paymentsHeadingIncludeBP
+{
+	width: 10%;
+}
+.backPayPaymentsNames
+{
+	width: 39%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+
+.backPayPaymentsUnits, .backPayPaymentsAmount
+{
+	width: 24%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: right;
+}
+.backPayAmountInput
+{
+	text-align: right;
+	width: 100%;
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	line-height:100%;
+	font-size: 18px;
+	background: #ffffcc;
+	margin: 0px;
+	padding:0px;
+}
+.backPayAmountResult
+{
+	text-align: right;
+	outline: none;
+	border: 0px;
+	overflow:hidden;
+	font-size: 18px;
+	background: #ffffcc;
+	margin: 0px;
+	padding:0px;
+	text-align: left;
+}
+.backPayPaymentsInclude
+{
+	width: 13%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: center;
+}
+.submitSuccessBPErorrs
+{
+	font-size: 16px !important;
+
+}
+
+#backPayCalculatorDivResponse2, #calendarDeleteDivResponse, #calendarGenerateDivResponse
+{
+	width: 60%;
+}
+#resetPasswordResponse
+ {
+	left:0px;
+	top:0px;
+	width:93%;
+	background: #e1e1d0;
+ }
+#submitSuccessDeductions, #submitSuccessPayments
+{
+	width: 67%;
+}
+/*totals calculator page----------------------------------------------------------------*/
+.totalsPaymentsNames, .totalsDeductionsDiv
+{
+	width: 52%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+}
+.totalsDeductionsDiv{
+	width: 50%;
+}
+
+.totalsPaymentsUnits, .totalsPaymentsAmount
+{
+	width: 24%;
+	height: auto;
+	font-size: 18px;
+	background: #ffffcc;
+	display: inline-block;
+	text-align: right;
+}
+.paymentsHeadingMainTotals, .paymentsHeadingTotals, .totalsDeductionsHeading
+{
+	border-bottom: 1px solid grey;
+	background: #0088cc;
+	color: white;
+	font: 20px sans-serif;
+	display: inline-block;
+	text-align: center;
+	
+}
+.paymentsHeadingMainTotals
+{
+	width: 52%;
+	text-align: left;
+}
+.paymentsHeadingTotals
+{
+	width: 24%;
+}
+.totalsDeductionsHeading
+{
+	width: 50%;
+}
+/*calendar generator page----------------------------------------*/
+.tableCalendarGen
+{
+	width: 352px;
+}
+
+
+.noDisplaySmallScreen
+{
+	display: none !important;
+}
+.tableHeadingCG, .tableHeadingCGDayName, .tableHeadingCGStartEndTime,
+{
+	font-size: 19px;
+}
+.tableHeadingCG
+{
+	width: 25%;
+}
+.tableHeadingCGDayName
+{
+	width: 29%;
+}
+.tableHeadingCGStartEndTime
+{
+	width: 23%;
+}
+
+.dateDivCalendarGen
+{
+	height:100%;
+	text-align: right;
+	width:84px;
+	
+	/*border-left: 1px solid white;
+	border-top: 1px solid white;*/
+	font-size: 16px;
+}
+.dateDivCalendarGen{
+box-shadow: 1px 0px grey inset;
+}
+#removeRow
+{
+	position: absolute;
+	right:130px;
+	top: 0px;
+}
+/*-------------footer---------------*/
+#footer
+{
+	margin: auto;
+	margin-top: 10px;
+	width: 100%;
+	background: #e1e1d0;
+	border-top: 1px solid grey;
+	position: relative;
+	height: 240px;
+}
+#socialIcons
+{
+	position: absolute;
+	top:5%;
+	left:25%;
+	width:95%;
+}
+#policies
+{
+	position: absolute;
+	top:30%;
+	left:35%;
+	width:95%;
+	font-size: 16px;
+}
+#footerBottom
+{
+	position: absolute;
+	top:85%;
+	left:25%;
+	width:50%;
+	text-align: center;
+}
+
+
+
+}
