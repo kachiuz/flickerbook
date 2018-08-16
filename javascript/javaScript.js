@@ -1,12 +1,17 @@
+//the start date in ms of flickerbook
+const timeSinceEpochOriginal = 1491004800000
+
+//day and month names used to generate dates
 var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",];
 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-var timeSinceEpochOriginal = 1491004800000	//balandzio pirma //1491177600000 - balandzio 3
-//var timeSinceEpoch = 1491004800000;
-
+//two arrays that get filled with variables from backend
 var weekStartArray = [];
 var unsHCheck = [];
 
+// bank holdiday days in ms
+//are neccessary when marking bank holidays in a calendar. needs to be filled manually
+//later can be done, so that it retrieves values from backend.
 var bankHolidayArray = [1492128000000, 1492387200000, 1493596800000, 1496016000000, 1503878400000, 1514160000000, 1514246400000];
 //2018
 bankHolidayArray.push(1514764800000, 1522368000000, 1522627200000, 1525651200000, 1527465600000, 1535328000000, 1545696000000, 1545782400000);
@@ -18,168 +23,127 @@ bankHolidayArray.push(1577836800000, 1586476800000, 1586736000000, 1590364800000
 bankHolidayArray.push(1609459200000, 1617321600000, 1617580800000, 1620000000000, 1622419200000, 1630281600000);
 bankHolidayArray.push(1640390400000, 1640476800000, 1640563200000, 1640649600000);
 
-//---------funkcija, kuri keicia fono spalva, bei matomumo parametrus priklausomai nuo pasirinktos dienos
-function hideHoursSelect()
-{
-	var taxPeriodNumber = document.getElementById("taxPeriodNr").value;
+
+//sicknes and other leaves can be either payed or not.
+//the function below either shows or hides the start-end time inputs depending on what value the radio button has (paid or not paid).
+const hideHoursSelect = () => {
+	let taxPeriodNumber = document.getElementById("taxPeriodNr").value;
 	weekStart = Number(weekStartArray[taxPeriodNumber]);
 	unsHCheckCurrent = Number(unsHCheck[taxPeriodNumber]);
-	var taxPeriodStart = (taxPeriodNumber-1)*7+weekStart;
+	let taxPeriodStart = (taxPeriodNumber-1)*7+weekStart;
 	for(b=0;b<7;b++)
 	{
-		var index = document.getElementById("dayType"+taxPeriodStart).options.selectedIndex;	
-		var startHours = document.getElementById("startHours"+taxPeriodStart);
-		var startMinutes = document.getElementById("startMinutes"+taxPeriodStart);
-		var endHours = document.getElementById("endHours"+taxPeriodStart);
-		var endMinutes = document.getElementById("endMinutes"+taxPeriodStart);
-		
-		var bereavementDiv = document.getElementById("bereavementDiv"+taxPeriodStart);
-		var sicknessTextDiv = document.getElementById("sicknessTextDiv"+taxPeriodStart);
-		var dayInSickTextDiv = document.getElementById("dayInSickTextDiv"+taxPeriodStart);
-		var familyLeaeveTextDiv = document.getElementById("familyLeaeveTextDiv"+taxPeriodStart);
-		var compassionateDiv = document.getElementById("compassionateDiv"+taxPeriodStart);
-		//var familyLeaveDiv = document.getElementById("familyLeaveDiv"+taxPeriodStart);
-		
-		var sicknessCheck = document.getElementById("sicknessButton"+taxPeriodStart).checked;
-		var dayInSickCheck = document.getElementById("dayInSickButton"+taxPeriodStart).checked;
-		var bereavementCheck = document.getElementById("bereavementButton"+taxPeriodStart).checked;
-		var familyCheck = document.getElementById("familyLeaveButton"+taxPeriodStart).checked;
-		
-		//var familySelectIndex = document.getElementById("familySelect"+taxPeriodStart).options.selectedIndex;
-		var compassionateCheck = document.getElementById("compassionateButton"+taxPeriodStart).checked;
+		//day type value
+		let index = document.getElementById("dayType"+taxPeriodStart).options.selectedIndex;
+		//start and finish time values
+		let startHours = document.getElementById("startHours"+taxPeriodStart);
+		let startMinutes = document.getElementById("startMinutes"+taxPeriodStart);
+		let endHours = document.getElementById("endHours"+taxPeriodStart);
+		let endMinutes = document.getElementById("endMinutes"+taxPeriodStart);
+		//text divs
+		let bereavementDiv = document.getElementById("bereavementDiv"+taxPeriodStart);
+		let sicknessTextDiv = document.getElementById("sicknessTextDiv"+taxPeriodStart);
+		let dayInSickTextDiv = document.getElementById("dayInSickTextDiv"+taxPeriodStart);
+		let familyLeaeveTextDiv = document.getElementById("familyLeaeveTextDiv"+taxPeriodStart);
+		let compassionateDiv = document.getElementById("compassionateDiv"+taxPeriodStart);
+		//radio button values: paid or not paid.
+		let sicknessCheck = document.getElementById("sicknessButton"+taxPeriodStart).checked;
+		let dayInSickCheck = document.getElementById("dayInSickButton"+taxPeriodStart).checked;
+		let bereavementCheck = document.getElementById("bereavementButton"+taxPeriodStart).checked;
+		let familyCheck = document.getElementById("familyLeaveButton"+taxPeriodStart).checked;
+		let compassionateCheck = document.getElementById("compassionateButton"+taxPeriodStart).checked;
 	
-		if (index === 7){
+		switch (index){
+			case 7:
 			if (unsHCheckCurrent === 1){
-				if (sicknessCheck === false)
-				{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				sicknessTextDiv.style.visibility = "visible";
+				if (sicknessCheck === false) {
+					startHours.style.visibility = "hidden";
+					startMinutes.style.visibility = "hidden";
+					endHours.style.visibility = "hidden";
+					endMinutes.style.visibility = "hidden";
+					sicknessTextDiv.style.visibility = "visible";
 				}
 				else if (sicknessCheck === true){
-				startHours.style.visibility = "visible";
-				startMinutes.style.visibility = "visible";
-				endHours.style.visibility = "visible";
-				endMinutes.style.visibility = "visible";
-				
-				sicknessTextDiv.style.visibility = "hidden";
+					startHours.style.visibility = "visible";
+					startMinutes.style.visibility = "visible";
+					endHours.style.visibility = "visible";
+					endMinutes.style.visibility = "visible";
+					sicknessTextDiv.style.visibility = "hidden";
 				}	
-				else {};
-			}
-			else{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				sicknessTextDiv.style.visibility = "visible";
-			}
-		}
-		
-		//family leave
-		else if (index === 9){
+				else {alert("Error");}
+			}	
+			break;
+			case 9:
 			if (unsHCheckCurrent === 1){
-				if (familyCheck === false)
-				{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				familyLeaeveTextDiv.style.visibility = "visible";
+				if (familyCheck === false){
+					startHours.style.visibility = "hidden";
+					startMinutes.style.visibility = "hidden";
+					endHours.style.visibility = "hidden";
+					endMinutes.style.visibility = "hidden";
+					familyLeaeveTextDiv.style.visibility = "visible";
 				}
 				else if (familyCheck === true){
-				startHours.style.visibility = "visible";
-				startMinutes.style.visibility = "visible";
-				endHours.style.visibility = "visible";
-				endMinutes.style.visibility = "visible";
-				
-				familyLeaeveTextDiv.style.visibility = "hidden";
+					startHours.style.visibility = "visible";
+					startMinutes.style.visibility = "visible";
+					endHours.style.visibility = "visible";
+					endMinutes.style.visibility = "visible";
+					familyLeaeveTextDiv.style.visibility = "hidden";
 				}
-				else {};
-			}
-			else
-			{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				familyLeaeveTextDiv.style.visibility = "visible";
-			}
-		}
-		
-		//bereavement check
-		else if (index === 10){
+				else {alert("Error");}
+			}	
+			break;
+			case 10:
 			if (unsHCheckCurrent === 1){
-				if (bereavementCheck === false)
-				{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				bereavementDiv.style.visibility = "visible"
+				if (bereavementCheck === false){
+					startHours.style.visibility = "hidden";
+					startMinutes.style.visibility = "hidden";
+					endHours.style.visibility = "hidden";
+					endMinutes.style.visibility = "hidden";
+					bereavementDiv.style.visibility = "visible"
 				}
 				else if (bereavementCheck === true){
-				startHours.style.visibility = "visible";
-				startMinutes.style.visibility = "visible";
-				endHours.style.visibility = "visible";
-				endMinutes.style.visibility = "visible";
-				
-				bereavementDiv.style.visibility = "hidden"
+					startHours.style.visibility = "visible";
+					startMinutes.style.visibility = "visible";
+					endHours.style.visibility = "visible";
+					endMinutes.style.visibility = "visible";
+					bereavementDiv.style.visibility = "hidden"
 				}
-				else {};
+				else {alert("Error");}
 			}
-			else
-			{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				bereavementDiv.style.visibility = "visible"
-			}
-		}
-		
-		//compassionate check
-		else if (index === 11){
+			break;
+			case 11:
 			if (unsHCheckCurrent === 1){
-				if (compassionateCheck === false)
-				{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				compassionateDiv.style.visibility = "visible"
+				if (compassionateCheck === false){
+					startHours.style.visibility = "hidden";
+					startMinutes.style.visibility = "hidden";
+					endHours.style.visibility = "hidden";
+					endMinutes.style.visibility = "hidden";
+					compassionateDiv.style.visibility = "visible"
 				}
 				else if (compassionateCheck === true){
+					startHours.style.visibility = "visible";
+					startMinutes.style.visibility = "visible";
+					endHours.style.visibility = "visible";
+					endMinutes.style.visibility = "visible";
+					compassionateDiv.style.visibility = "hidden"
+				}
+				else {alert("Error");}
+			}	
+			break;
+			default:
 				startHours.style.visibility = "visible";
 				startMinutes.style.visibility = "visible";
 				endHours.style.visibility = "visible";
 				endMinutes.style.visibility = "visible";
-				
-				compassionateDiv.style.visibility = "hidden"
-				}
-				else {};
-			}
-			else{
-				startHours.style.visibility = "hidden";
-				startMinutes.style.visibility = "hidden";
-				endHours.style.visibility = "hidden";
-				endMinutes.style.visibility = "hidden";
-				
-				compassionateDiv.style.visibility = "visible"
-			}
+				sicknessTextDiv.style.visibility = "hidden";
+				familyLeaeveTextDiv.style.visibility = "hidden";
+				bereavementDiv.style.visibility = "hidden";
+				compassionateDiv.style.visibility = "hidden";
+			break;
 		}
-		//changeSelectBackground();
-		taxPeriodStart++;
-	}	
-}
+	taxPeriodStart++;	
+	}
+};	
 
 function calendarBackgroundChangeOnSelect ()
 {
